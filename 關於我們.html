@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老獵人創意品牌顧問有限公司</title>
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+<hr>
+
+<body>
+    <!-- 頁首 -->
+    <header>
+        <!-- nav bar 和 menu -->
+        <nav class="fixed-top">
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="24px" fill="#1d2a56">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="關於我們.html">關於我們</a></li>
+                <li><a href="服務介紹.html">服務介紹</a></li>
+                <li><a href="聯絡我們.html">聯絡我們</a></li>
+            </ul>
+            <ul>
+                <li><a href="index.html"
+                        style="text-decoration: none; color: inherit; background-color: transparent; transition: none;"><img
+                            style="height: 50px; padding: 5px;" src="./pics/logo.png" alt="creahunter"
+                            style="transition: none;"></a></li>
+
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#1d2a56">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+        <!-- facebook & instagram 的 icons -->
+        <div class="icons">
+            <a href="https://www.facebook.com/hunterlife2016/" target="_blank"><i class="fa fa-instagram">
+                    <img src="./pics/facebook-w-01-01.png" style="width: 3vw"></i></a><br>
+            <a href="https://www.instagram.com/hunterlife2016/" target="_blank"><i class="fa fa-facebook"><img src="./pics/ins-w-01.png"
+                        style="width: 3vw"></i></a>
+        </div>
+    </header>
+
+    <!-- 內容 -->
+    <!-- 投影slide -->
+    <section>
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <picture>
+                <source media="(min-width:1200px)" srcset="./about/ab-5-1200.png">
+                <source media="(min-width:900px)" srcset="./about/ab-5-900.png">
+                <img src="./about/ab-5.png" style="object-fit: cover; height: 100%;">
+            </picture>
+            <div class="text">
+                <h5 style="color:#1d2a56">品牌形象</h5>
+                <hr style="width: 25%; height: 2px;" color="#1d2a56">
+                <p style="font-style: italic; font-weight: 520; color:#1d2a56;">是第一印象<br>決定消費者是否願意了解你的產品或服務。</p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <picture>
+                <source media="(min-width:1200px)" srcset="./about/ab-1-1200.png">
+                <source media="(min-width:900px)" srcset="./about/ab-1-900.png">
+                <img src="./about/ab-1.png" style="object-fit: cover; height: 100%;">
+            </picture>
+            <div class="text" style="text-align: left;">
+                <h5>品牌故事</h5>
+                <hr style="width: 25%; height: 2px;" color="white">
+                <p style="font-style: italic; font-weight: 500;">故事應該真實且能引起共鳴，<br>讓消費者覺得自己也是這個故事的一部分。</p>
+            </div>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- 關於我們 -->
+    <section class="about-container">
+        <h2 class="ab-h2">ABOUT US</h2>
+        <div class="inner-about">
+            <div class="box">
+                <h2>MISSION</h2>
+                <h3>使命</h3>
+                <hr>
+                <ul>
+                    <li>協助客戶發現和實現品牌的潛力與價值。</li>
+                    <li>透過專業的設計和行銷策略講述品牌故事，吸引目標受眾。</li>
+                    <li>提升品牌知名度，幫助客戶在競爭激烈的市場中立足。</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>VISION</h2>
+                <h3>願景</h3>
+                <hr>
+                <ul>
+                    <li>成為設計行銷領域的領導者，提供創新和卓越的服務。</li>
+                    <li>成為所有希望成功推廣自己或產品的首選夥伴。</li>
+                    <li>樹立新的標準，激勵其他品牌追求卓越和創新。</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>CORE VALUE</h2>
+                <h3>核心</h3>
+                <hr>
+                <ul>
+                    <li>始終堅持客戶至上的原則，確保每個項目超出預期。</li>
+                    <li>專業精神體現在設計過程和行銷策略的每個細節中。</li>
+                    <li>不斷尋求創新方法和技術，提高效率，提供獨特的解決方案。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--起源 Time Line-->
+    <section class="sec-3">
+
+        <div class="time-container">
+            <div class="top-section">
+                <h1>老獵人的起源故事</h1>
+            </div>
+            <div class="timeline">
+                <div class="line"></div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content">
+                        <h2>2020年</h2>
+                        <p>疫情期間全球疫情最嚴峻的時刻，市場活動幾乎停滯。面對疫情影響，創辦人觀察到周圍人們的創業渴望與困惑，決心協助他們。</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content">
+                        <h2>2020年末</h2>
+                        <p>老獵人創意有限公司正式成立，開始提供合理且高品質的設計行銷服務。</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content">
+                        <h2>2021年</h2>
+                        <p>從一人工作室發展為5人團隊，提供斜杠青年、中小企業和餐飲全方位服務。</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content">
+                        <h2>2022年</h2>
+                        <p>老獵人已為超過1000個個人和企業建立新品牌，每一個合作都是一個故事，每一個成功都是一個里程碑。</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content">
+                        <h2>2023年</h2>
+                        <p>老獵人不僅為客戶提供服務，更成為他們夢想的動力。願景是成為推動品牌成長的夥伴，與客戶共同創造更美好的未來。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="end-section">
+                <h1>選擇老獵人</h1>
+                <p style="text-align: center;">客戶選擇老獵人，代表選擇信任與專業的合作夥伴關係</p>
+            </div>
+            <div class="timeline">
+                <a href="#" class="secbtn">聯絡我們</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <div class="footer">
+        <footer>
+
+            <ul class="menu">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="關於我們.html" class="nav-link px-2 text-body-secondary">關於我們</a></li>
+                <li class="nav-item"><a href="服務介紹.html" class="nav-link px-2 text-body-secondary">服務介紹</a></li>
+                <li class="nav-item"><a href="聯絡我們.html" class="nav-link px-2 text-body-secondary">聯絡我們</a></li>
+            </ul>
+            <p>&copy; 2024 Company, Inc</p>
+        </footer>
+    </div>
+
+
+    <script>
+        // Sidebar
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+
+        // Slide
+        let slideIndex = 1; // 初始化 slideIndex
+        let slideTimer; // 用於存儲計時器
+
+        showSlides(slideIndex); // 初始化顯示第一張幻燈片
+
+
+        // 自動切換幻燈片
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            // 隱藏所有幻燈片
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // 使 slideIndex 循環
+            if (n > slides.length) {
+                slideIndex = 1;
+            } else if (n < 1) {
+                slideIndex = slides.length;
+            } else {
+                slideIndex = n;
+            }
+
+            // 清除所有點的激活狀態
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // 顯示當前幻燈片並激活相應的點
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+
+            // 設置5秒的自動切換間隔
+            slideTimer = setTimeout(function () {
+                plusSlides(1);
+            }, 5000);
+        }
+
+        // 手動切換幻燈片
+        function plusSlides(n) {
+            clearTimeout(slideTimer); // 清除當前計時器，防止衝突
+            showSlides(slideIndex += n); // 更新並顯示新的幻燈片
+        }
+
+        // 選擇指定的幻燈片
+        function currentSlide(n) {
+            clearTimeout(slideTimer); // 清除當前計時器
+            showSlides(slideIndex = n); // 設置當前幻燈片索引
+        }
+
+        // Time-Line
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle adding 'show-me' class
+        document.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('.section');
+            const line = document.querySelector('.line');
+
+            // Calculate the viewport height
+            const triggerBottom = window.innerHeight * 0.8;
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('show-me');
+                    line.style.display = 'block'; // Show the timeline line
+                } else {
+                    section.classList.remove('show-me');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

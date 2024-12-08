@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老獵人創意品牌顧問有限公司</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <!-- nav bar 和 menu -->
+        <nav class="fixed-top">
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="24px" fill="#1d2a56">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="關於我們.html">關於我們</a></li>
+                <li><a href="服務介紹.html">服務介紹</a></li>
+                <li><a href="聯絡我們.html">聯絡我們</a></li>
+            </ul>
+            <ul>
+                <li><a href="index.html"
+                        style="text-decoration: none; color: inherit; background-color: transparent; transition: none;"><img
+                            style="height: 50px; padding: 5px;" src="./pics/logo.png" alt="creahunter"
+                            style="transition: none;"></a></li>
+
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#1d2a56">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 聯絡我們 -->
+    <section class="contact">
+        <div class="content">
+            <h2>聯絡我們</h2>
+            <p>無論您需要哪種設計服務，我們都能提供專業支持，以確保您的品牌成功。</p>
+        </div>
+        <div class="ct-container">
+            <div class="contactForm">
+                <form id="contactForm" method="POST" action="./contact.php">
+                    <div class="inputBox">
+                        <input type="text" name="name" required>
+                        <span>名字</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="tel" name="phone" pattern="[0-9]{10}" maxlength="10" required>
+                        <span>電話</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" required></textarea>
+                        <span>問題內容...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="提交" class="ct-btn">
+                    </div>
+                </form>
+
+                <!-- 成功提示窗 -->
+                <div id="customAlert" class="custom-alert" style="display: none;">
+                    <div class="custom-alert-content">
+                        <p id="alertMessage"></p>
+                        <button onclick="closeCustomAlert()">關閉</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Custom alert functions
+        function showCustomAlert(message) {
+            document.getElementById('alertMessage').innerText = message;
+            document.getElementById('customAlert').style.display = 'flex'; // Show the alert
+        }
+
+        function closeCustomAlert() {
+            document.getElementById('customAlert').style.display = 'none'; // Hide the alert
+        }
+
+        // AJAX form submission
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
+            const formData = new FormData(event.target);
+
+            // Use AJAX to send the form data
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Check if submission was successful
+                    if (data.includes('Message has been sent')) {
+                        showCustomAlert('提交成功！感謝您的來信。');
+                    } else {
+                        showCustomAlert('發生錯誤，請稍後再試。');
+                    }
+                })
+                .catch(error => {
+                    showCustomAlert('發生錯誤，請稍後再試。');
+                });
+        });
+    </script>
+</body>
+
+</html>
