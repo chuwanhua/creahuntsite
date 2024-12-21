@@ -6,8 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
-    overflow-y: auto !important;
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
     
 }
 
@@ -19,8 +19,6 @@ body {
     background-size: cover;
     font-family: "Chocolate Classical Sans";
     position: relative;
-    overflow-x: hidden;
-    overflow-y: auto !important;
 
 }
 
