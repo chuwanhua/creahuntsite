@@ -1269,6 +1269,7 @@ h2 {
 @media (max-width: 768px) {
     .ab-h2 {
         font-size: 2em;
+        padding-bottom: 50px;
         /* 缩小标题的字体大小 */
     }
 
@@ -2366,5 +2367,11 @@ div .g-item .overlay {
     .gallery .g-item {
         width: 100%;
         margin: 4px 0px;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .ab-h2{
+        margin-bottom: 50px;
     }
 }
